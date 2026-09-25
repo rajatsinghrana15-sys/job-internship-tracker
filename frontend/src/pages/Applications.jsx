@@ -29,7 +29,7 @@ function Applications() {
       const token = localStorage.getItem("token");
 
       const response = await axios.get(
-        "http://localhost:5000/api/applications",
+        `${import.meta.env.VITE_API_URL}/api/applications`,
         {
           headers: {
             Authorization: `Bearer ${token}`,
@@ -78,11 +78,14 @@ function Applications() {
     try {
       const token = localStorage.getItem("token");
 
-      await axios.delete(`http://localhost:5000/api/applications/${id}`, {
-        headers: {
-          Authorization: `Bearer ${token}`,
+      await axios.delete(
+        `${import.meta.env.VITE_API_URL}/api/applications/${id}`,
+        {
+          headers: {
+            Authorization: `Bearer ${token}`,
+          },
         },
-      });
+      );
 
       setApplications((prev) =>
         prev.filter((application) => application._id !== id),

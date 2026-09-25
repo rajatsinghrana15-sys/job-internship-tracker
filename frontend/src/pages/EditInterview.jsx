@@ -31,11 +31,14 @@ function EditInterview() {
     try {
       const token = localStorage.getItem("token");
 
-      const response = await axios.get("http://localhost:5000/api/interviews", {
-        headers: {
-          Authorization: `Bearer ${token}`,
+      const response = await axios.get(
+        `${import.meta.env.VITE_API_URL}/api/interviews`,
+        {
+          headers: {
+            Authorization: `Bearer ${token}`,
+          },
         },
-      });
+      );
 
       const interview = response.data.find((item) => item._id === id);
 
@@ -86,11 +89,15 @@ function EditInterview() {
 
       const token = localStorage.getItem("token");
 
-      await axios.put(`http://localhost:5000/api/interviews/${id}`, formData, {
-        headers: {
-          Authorization: `Bearer ${token}`,
+      await axios.put(
+        `${import.meta.env.VITE_API_URL}/api/interviews/${id}`,
+        formData,
+        {
+          headers: {
+            Authorization: `Bearer ${token}`,
+          },
         },
-      });
+      );
 
       navigate("/interviews");
     } catch (error) {

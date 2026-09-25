@@ -32,7 +32,7 @@ function EditApplication() {
       const token = localStorage.getItem("token");
 
       const response = await axios.get(
-        "http://localhost:5000/api/applications",
+        `${import.meta.env.VITE_API_URL}/api/applications`,
         {
           headers: {
             Authorization: `Bearer ${token}`,
@@ -83,7 +83,7 @@ function EditApplication() {
       const token = localStorage.getItem("token");
 
       await axios.put(
-        `http://localhost:5000/api/applications/${id}`,
+        `${import.meta.env.VITE_API_URL}/api/applications/${id}`,
         formData,
         {
           headers: {

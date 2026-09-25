@@ -54,13 +54,15 @@ function Dashboard() {
 
       const [statsResponse, applicationsResponse, interviewsResponse] =
         await Promise.all([
-          axios.get("http://localhost:5000/api/applications/stats", {
+          axios.get(`${import.meta.env.VITE_API_URL}/api/applications/stats`, {
             headers,
           }),
 
-          axios.get("http://localhost:5000/api/applications", { headers }),
+          axios.get(`${import.meta.env.VITE_API_URL}/api/applications`, {
+            headers,
+          }),
 
-          axios.get("http://localhost:5000/api/interviews/upcoming", {
+          axios.get(`${import.meta.env.VITE_API_URL}/api/interviews/upcoming`, {
             headers,
           }),
         ]);

@@ -27,11 +27,14 @@ function Interviews() {
     try {
       const token = localStorage.getItem("token");
 
-      const response = await axios.get("http://localhost:5000/api/interviews", {
-        headers: {
-          Authorization: `Bearer ${token}`,
+      const response = await axios.get(
+        `${import.meta.env.VITE_API_URL}/api/interviews`,
+        {
+          headers: {
+            Authorization: `Bearer ${token}`,
+          },
         },
-      });
+      );
 
       setInterviews(response.data);
     } catch (error) {
@@ -51,11 +54,14 @@ function Interviews() {
     try {
       const token = localStorage.getItem("token");
 
-      await axios.delete(`http://localhost:5000/api/interviews/${id}`, {
-        headers: {
-          Authorization: `Bearer ${token}`,
+      await axios.delete(
+        `${import.meta.env.VITE_API_URL}/api/interviews/${id}`,
+        {
+          headers: {
+            Authorization: `Bearer ${token}`,
+          },
         },
-      });
+      );
 
       setInterviews((prev) => prev.filter((interview) => interview._id !== id));
     } catch (error) {

@@ -38,11 +38,14 @@ function Settings() {
     try {
       const token = localStorage.getItem("token");
 
-      const response = await axios.get("http://localhost:5000/api/auth/me", {
-        headers: {
-          Authorization: `Bearer ${token}`,
+      const response = await axios.get(
+        `${import.meta.env.VITE_API_URL}/api/auth/me`,
+        {
+          headers: {
+            Authorization: `Bearer ${token}`,
+          },
         },
-      });
+      );
 
       setProfile({
         name: response.data.name,
@@ -81,7 +84,7 @@ function Settings() {
       const token = localStorage.getItem("token");
 
       const response = await axios.put(
-        "http://localhost:5000/api/auth/profile",
+        `${import.meta.env.VITE_API_URL}/api/auth/profile`,
         profile,
         {
           headers: {
@@ -110,7 +113,7 @@ function Settings() {
       const token = localStorage.getItem("token");
 
       const response = await axios.put(
-        "http://localhost:5000/api/auth/password",
+        `${import.meta.env.VITE_API_URL}/api/auth/password`,
         passwords,
         {
           headers: {

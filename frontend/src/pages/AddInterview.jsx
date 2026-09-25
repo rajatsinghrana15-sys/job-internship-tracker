@@ -45,11 +45,15 @@ function AddInterview() {
 
       const token = localStorage.getItem("token");
 
-      await axios.post("http://localhost:5000/api/interviews", formData, {
-        headers: {
-          Authorization: `Bearer ${token}`,
+      await axios.post(
+        `${import.meta.env.VITE_API_URL}/api/interviews`,
+        formData,
+        {
+          headers: {
+            Authorization: `Bearer ${token}`,
+          },
         },
-      });
+      );
 
       navigate("/interviews");
     } catch (error) {

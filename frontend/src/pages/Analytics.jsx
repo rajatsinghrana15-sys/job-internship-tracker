@@ -27,7 +27,7 @@ function Analytics() {
       const token = localStorage.getItem("token");
 
       const response = await axios.get(
-        "http://localhost:5000/api/applications/analytics",
+        `${import.meta.env.VITE_API_URL}/api/applications/analytics`,
         {
           headers: {
             Authorization: `Bearer ${token}`,
