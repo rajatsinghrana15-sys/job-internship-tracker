@@ -1,0 +1,621 @@
+/* ========================================
+   APPLICATIONS PAGE
+======================================== */
+
+.applications-page {
+  min-height: 100vh;
+  background: #f8fafc;
+  color: #0f172a;
+}
+
+/* ========================================
+   HEADER
+======================================== */
+
+.applications-header {
+  height: 68px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  box-sizing: border-box;
+  padding: 0 36px;
+  border-bottom: 1px solid #e2e8f0;
+  background: #ffffff;
+}
+
+.back-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  color: #64748b;
+  text-decoration: none;
+  font-size: 13px;
+  font-weight: 550;
+  transition: color 0.2s ease;
+}
+
+.back-link:hover {
+  color: #2563eb;
+}
+
+.applications-brand {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  color: #2563eb;
+  font-size: 19px;
+  font-weight: 750;
+  letter-spacing: -0.4px;
+}
+
+.applications-brand span {
+  color: #0f172a;
+}
+
+.applications-add-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+  padding: 10px 15px;
+  border-radius: 8px;
+  background: #2563eb;
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 13px;
+  font-weight: 650;
+  white-space: nowrap;
+  transition:
+    background 0.2s ease,
+    box-shadow 0.2s ease,
+    transform 0.2s ease;
+}
+
+.applications-add-btn:hover {
+  background: #1d4ed8;
+  box-shadow: 0 6px 16px rgba(37, 99, 235, 0.18);
+  transform: translateY(-1px);
+}
+
+/* ========================================
+   MAIN
+======================================== */
+
+.applications-main {
+  max-width: 1450px;
+  margin: 0 auto;
+  padding: 36px;
+}
+
+/* ========================================
+   TITLE
+======================================== */
+
+.applications-title {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  margin-bottom: 26px;
+}
+
+.applications-title h1 {
+  margin: 0 0 7px;
+  color: #0f172a;
+  font-size: 28px;
+  font-weight: 750;
+  letter-spacing: -0.7px;
+}
+
+.applications-title p {
+  margin: 0;
+  color: #64748b;
+  font-size: 14px;
+}
+
+/* ========================================
+   TOOLBAR
+======================================== */
+
+.applications-toolbar {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 18px;
+}
+
+.applications-search {
+  width: 100%;
+  max-width: 430px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  box-sizing: border-box;
+  padding: 0 13px;
+  border: 1px solid #cbd5e1;
+  border-radius: 8px;
+  background: #ffffff;
+  color: #94a3b8;
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.applications-search:focus-within {
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+}
+
+.applications-search input {
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  border: none;
+  outline: none;
+  background: transparent;
+  color: #0f172a;
+  font-family: inherit;
+  font-size: 13px;
+}
+
+.applications-search input::placeholder {
+  color: #94a3b8;
+}
+
+.applications-filter {
+  height: 44px;
+  min-width: 150px;
+  padding: 0 12px;
+  border: 1px solid #cbd5e1;
+  border-radius: 8px;
+  outline: none;
+  background: #ffffff;
+  color: #334155;
+  cursor: pointer;
+  font-family: inherit;
+  font-size: 13px;
+}
+
+.applications-filter:focus {
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+}
+
+/* ========================================
+   ERROR
+======================================== */
+
+.applications-error {
+  margin-bottom: 18px;
+  padding: 12px 14px;
+  border: 1px solid #fecaca;
+  border-radius: 8px;
+  background: #fef2f2;
+  color: #dc2626;
+  font-size: 13px;
+}
+
+/* ========================================
+   TABLE WRAPPER
+======================================== */
+
+.applications-table-wrapper {
+  width: 100%;
+  overflow-x: auto;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  background: #ffffff;
+  box-shadow: 0 4px 15px rgba(15, 23, 42, 0.03);
+}
+
+/* ========================================
+   TABLE
+======================================== */
+
+.applications-table {
+  width: 100%;
+  min-width: 1050px;
+  border-collapse: collapse;
+  text-align: left;
+}
+
+.applications-table th {
+  height: 48px;
+  padding: 0 18px;
+  border-bottom: 1px solid #e2e8f0;
+  background: #f8fafc;
+  color: #64748b;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.3px;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.applications-table td {
+  height: 68px;
+  padding: 0 18px;
+  border-bottom: 1px solid #f1f5f9;
+  color: #334155;
+  font-size: 13px;
+  vertical-align: middle;
+}
+
+.applications-table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+.applications-table tbody tr {
+  transition: background 0.2s ease;
+}
+
+.applications-table tbody tr:hover {
+  background: #f8fafc;
+}
+
+/* ========================================
+   COMPANY
+======================================== */
+
+.table-company {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  min-width: 150px;
+}
+
+.table-company-logo {
+  width: 34px;
+  height: 34px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #dbeafe;
+  border-radius: 8px;
+  background: #eff6ff;
+  color: #2563eb;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.table-company strong {
+  max-width: 150px;
+  overflow: hidden;
+  color: #0f172a;
+  font-size: 13px;
+  font-weight: 650;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/* ========================================
+   ROLE
+======================================== */
+
+.table-role {
+  display: block;
+  max-width: 180px;
+  overflow: hidden;
+  color: #334155;
+  font-size: 13px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/* ========================================
+   TYPE
+======================================== */
+
+.table-type {
+  display: inline-block;
+  padding: 5px 8px;
+  border-radius: 6px;
+  background: #f1f5f9;
+  color: #475569;
+  font-size: 11px;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+/* ========================================
+   LOCATION
+======================================== */
+
+.table-location {
+  max-width: 150px;
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  overflow: hidden;
+  color: #64748b;
+  font-size: 12px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.table-location svg {
+  flex-shrink: 0;
+  color: #94a3b8;
+}
+
+/* ========================================
+   STATUS
+======================================== */
+
+.table-status {
+  display: inline-flex;
+  align-items: center;
+  padding: 5px 9px;
+  border-radius: 6px;
+  font-size: 11px;
+  font-weight: 650;
+  white-space: nowrap;
+}
+
+.table-status.applied {
+  background: #eff6ff;
+  color: #2563eb;
+}
+
+.table-status.interview {
+  background: #fff7ed;
+  color: #ea580c;
+}
+
+.table-status.offer {
+  background: #f0fdf4;
+  color: #16a34a;
+}
+
+.table-status.rejected {
+  background: #fef2f2;
+  color: #dc2626;
+}
+
+/* ========================================
+   DATE
+======================================== */
+
+.table-date {
+  color: #64748b;
+  font-size: 12px;
+  white-space: nowrap;
+}
+
+/* ========================================
+   JOB LINK
+======================================== */
+
+.job-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  color: #2563eb;
+  text-decoration: none;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.job-link:hover {
+  color: #1d4ed8;
+  text-decoration: underline;
+}
+
+.no-job-link {
+  color: #cbd5e1;
+  font-size: 14px;
+}
+
+/* ========================================
+   ACTIONS
+======================================== */
+
+.application-actions {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+}
+
+.edit-application-btn,
+.delete-application-btn {
+  width: 32px;
+  height: 32px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  border-radius: 7px;
+  cursor: pointer;
+  transition:
+    background 0.2s ease,
+    color 0.2s ease,
+    border-color 0.2s ease;
+}
+
+.edit-application-btn {
+  border: 1px solid #dbeafe;
+  background: #eff6ff;
+  color: #2563eb;
+  text-decoration: none;
+}
+
+.edit-application-btn:hover {
+  border-color: #bfdbfe;
+  background: #dbeafe;
+  color: #1d4ed8;
+}
+
+.delete-application-btn {
+  border: 1px solid #fee2e2;
+  background: #fef2f2;
+  color: #dc2626;
+}
+
+.delete-application-btn:hover {
+  border-color: #fecaca;
+  background: #fee2e2;
+}
+
+/* ========================================
+   EMPTY STATE
+======================================== */
+
+.applications-empty {
+  min-height: 360px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  padding: 40px 20px;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  background: #ffffff;
+  text-align: center;
+}
+
+.applications-empty > svg {
+  margin-bottom: 15px;
+  color: #cbd5e1;
+}
+
+.applications-empty h3 {
+  margin: 0 0 7px;
+  color: #334155;
+  font-size: 16px;
+  font-weight: 650;
+}
+
+.applications-empty p {
+  max-width: 380px;
+  margin: 0 0 20px;
+  color: #94a3b8;
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+.applications-empty-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+  padding: 10px 15px;
+  border-radius: 8px;
+  background: #2563eb;
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 13px;
+  font-weight: 650;
+  transition:
+    background 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.applications-empty-btn:hover {
+  background: #1d4ed8;
+  box-shadow: 0 6px 16px rgba(37, 99, 235, 0.18);
+}
+
+/* ========================================
+   LARGE TABLET
+======================================== */
+
+@media (max-width: 900px) {
+  .applications-header {
+    padding: 0 24px;
+  }
+
+  .applications-main {
+    padding: 30px 24px;
+  }
+
+  .applications-brand {
+    font-size: 18px;
+  }
+}
+
+/* ========================================
+   TABLET
+======================================== */
+
+@media (max-width: 700px) {
+  .applications-header {
+    height: auto;
+    min-height: 68px;
+    flex-wrap: wrap;
+    padding: 15px 18px;
+  }
+
+  .applications-brand {
+    order: -1;
+    width: 100%;
+    justify-content: center;
+  }
+
+  .applications-main {
+    padding: 25px 18px 35px;
+  }
+
+  .applications-title h1 {
+    font-size: 25px;
+  }
+
+  .applications-toolbar {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .applications-search {
+    max-width: none;
+  }
+
+  .applications-filter {
+    width: 100%;
+  }
+}
+
+/* ========================================
+   MOBILE
+======================================== */
+
+@media (max-width: 480px) {
+  .applications-header {
+    gap: 12px;
+  }
+
+  .back-link {
+    font-size: 12px;
+  }
+
+  .applications-add-btn {
+    padding: 9px 11px;
+    font-size: 12px;
+  }
+
+  .applications-main {
+    padding: 22px 12px 30px;
+  }
+
+  .applications-title {
+    margin-bottom: 20px;
+  }
+
+  .applications-title h1 {
+    font-size: 23px;
+  }
+
+  .applications-title p {
+    font-size: 12px;
+  }
+
+  .applications-table-wrapper {
+    border-radius: 9px;
+  }
+
+  .applications-empty {
+    min-height: 320px;
+    padding: 30px 18px;
+  }
+}

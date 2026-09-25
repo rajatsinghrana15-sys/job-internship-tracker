@@ -1,0 +1,540 @@
+/* ================================
+   ANALYTICS PAGE
+================================ */
+
+.analytics-page {
+  min-height: 100vh;
+  background: #f7f9fc;
+  color: #1f2937;
+}
+
+/* ================================
+   HEADER
+================================ */
+
+.analytics-header {
+  height: 72px;
+  padding: 0 40px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  background: #ffffff;
+  border-bottom: 1px solid #e5e7eb;
+
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.analytics-back-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+
+  color: #4b5563;
+  text-decoration: none;
+
+  font-size: 14px;
+  font-weight: 500;
+
+  transition: color 0.2s ease;
+}
+
+.analytics-back-link:hover {
+  color: #2563eb;
+}
+
+.analytics-brand {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+
+  color: #2563eb;
+
+  font-size: 20px;
+  font-weight: 700;
+  letter-spacing: -0.3px;
+}
+
+/* ================================
+   MAIN
+================================ */
+
+.analytics-main {
+  width: min(100% - 48px, 1100px);
+  margin: 0 auto;
+
+  padding: 42px 0 60px;
+}
+
+/* ================================
+   TITLE
+================================ */
+
+.analytics-title {
+  margin-bottom: 28px;
+}
+
+.analytics-title h1 {
+  margin: 0 0 7px;
+
+  color: #111827;
+
+  font-size: 30px;
+  line-height: 1.2;
+  font-weight: 700;
+  letter-spacing: -0.5px;
+}
+
+.analytics-title p {
+  margin: 0;
+
+  color: #6b7280;
+
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+/* ================================
+   OVERVIEW
+================================ */
+
+.analytics-overview {
+  margin-bottom: 32px;
+}
+
+.analytics-total-card {
+  min-height: 120px;
+
+  display: flex;
+  align-items: center;
+  gap: 18px;
+
+  padding: 24px 28px;
+
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 14px;
+
+  box-shadow: 0 4px 18px rgba(15, 23, 42, 0.04);
+}
+
+.analytics-total-icon {
+  width: 54px;
+  height: 54px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  flex-shrink: 0;
+
+  background: #eff6ff;
+  border-radius: 12px;
+
+  color: #2563eb;
+}
+
+.analytics-total-card > div:last-child {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.analytics-total-card span {
+  color: #6b7280;
+
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.analytics-total-card strong {
+  color: #111827;
+
+  font-size: 30px;
+  line-height: 1;
+  font-weight: 700;
+}
+
+/* ================================
+   SECTION
+================================ */
+
+.analytics-section {
+  margin-bottom: 32px;
+}
+
+.analytics-section-header {
+  margin-bottom: 18px;
+}
+
+.analytics-section-header h2 {
+  margin: 0 0 5px;
+
+  color: #111827;
+
+  font-size: 19px;
+  font-weight: 700;
+}
+
+.analytics-section-header p {
+  margin: 0;
+
+  color: #6b7280;
+
+  font-size: 14px;
+}
+
+/* ================================
+   STATUS GRID
+================================ */
+
+.analytics-status-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+
+  gap: 16px;
+}
+
+.analytics-status-card {
+  min-height: 110px;
+
+  display: flex;
+  align-items: center;
+  gap: 14px;
+
+  padding: 20px;
+
+  background: #ffffff;
+
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+
+  box-shadow: 0 3px 14px rgba(15, 23, 42, 0.03);
+
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.analytics-status-card:hover {
+  transform: translateY(-2px);
+
+  box-shadow: 0 7px 20px rgba(15, 23, 42, 0.07);
+}
+
+.analytics-status-icon {
+  width: 42px;
+  height: 42px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  flex-shrink: 0;
+
+  border-radius: 10px;
+}
+
+.analytics-status-card > div:last-child {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.analytics-status-card span {
+  color: #6b7280;
+
+  font-size: 13px;
+  font-weight: 500;
+}
+
+.analytics-status-card strong {
+  color: #111827;
+
+  font-size: 24px;
+  line-height: 1;
+  font-weight: 700;
+}
+
+/* ================================
+   STATUS COLORS
+================================ */
+
+.analytics-status-card.applied .analytics-status-icon {
+  background: #eff6ff;
+  color: #2563eb;
+}
+
+.analytics-status-card.interviews .analytics-status-icon {
+  background: #fff7ed;
+  color: #ea580c;
+}
+
+.analytics-status-card.offers .analytics-status-icon {
+  background: #f0fdf4;
+  color: #16a34a;
+}
+
+.analytics-status-card.rejected .analytics-status-icon {
+  background: #fef2f2;
+  color: #dc2626;
+}
+
+/* ================================
+   TYPE CARD
+================================ */
+
+.analytics-type-card {
+  padding: 24px;
+
+  background: #ffffff;
+
+  border: 1px solid #e5e7eb;
+  border-radius: 14px;
+
+  box-shadow: 0 4px 18px rgba(15, 23, 42, 0.04);
+}
+
+.analytics-type-row {
+  margin-bottom: 24px;
+}
+
+.analytics-type-row:last-child {
+  margin-bottom: 0;
+}
+
+.analytics-type-info {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  margin-bottom: 9px;
+}
+
+.analytics-type-info span {
+  color: #374151;
+
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.analytics-type-info strong {
+  color: #111827;
+
+  font-size: 14px;
+  font-weight: 700;
+}
+
+/* ================================
+   PROGRESS
+================================ */
+
+.analytics-progress {
+  width: 100%;
+  height: 9px;
+
+  overflow: hidden;
+
+  background: #eef2f7;
+  border-radius: 999px;
+}
+
+.analytics-progress-bar {
+  height: 100%;
+
+  background: #2563eb;
+
+  border-radius: 999px;
+
+  transition: width 0.4s ease;
+}
+
+/* ================================
+   LOADING
+================================ */
+
+.analytics-loading {
+  min-height: 100vh;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  color: #6b7280;
+
+  font-size: 15px;
+  font-weight: 500;
+}
+
+/* ================================
+   ERROR
+================================ */
+
+.analytics-error {
+  width: min(100% - 48px, 600px);
+
+  margin: 100px auto 0;
+  padding: 16px 18px;
+
+  background: #fef2f2;
+
+  border: 1px solid #fecaca;
+  border-radius: 9px;
+
+  color: #b91c1c;
+
+  text-align: center;
+
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+/* ================================
+   RESPONSIVE - 1000px
+================================ */
+
+@media (max-width: 1000px) {
+  .analytics-status-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+/* ================================
+   RESPONSIVE - 700px
+================================ */
+
+@media (max-width: 700px) {
+  .analytics-header {
+    padding: 0 24px;
+  }
+
+  .analytics-main {
+    width: min(100% - 32px, 1100px);
+
+    padding: 32px 0 50px;
+  }
+
+  .analytics-title h1 {
+    font-size: 27px;
+  }
+
+  .analytics-total-card {
+    padding: 22px;
+  }
+
+  .analytics-section {
+    margin-bottom: 28px;
+  }
+}
+
+/* ================================
+   RESPONSIVE - 600px
+================================ */
+
+@media (max-width: 600px) {
+  .analytics-header {
+    height: 64px;
+    padding: 0 18px;
+  }
+
+  .analytics-brand {
+    font-size: 18px;
+  }
+
+  .analytics-back-link {
+    font-size: 13px;
+  }
+
+  .analytics-main {
+    width: min(100% - 24px, 1100px);
+
+    padding: 26px 0 40px;
+  }
+
+  .analytics-title {
+    margin-bottom: 22px;
+  }
+
+  .analytics-title h1 {
+    font-size: 26px;
+  }
+
+  .analytics-title p {
+    font-size: 14px;
+  }
+
+  .analytics-status-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .analytics-total-card {
+    min-height: 105px;
+    padding: 20px;
+  }
+
+  .analytics-total-icon {
+    width: 48px;
+    height: 48px;
+  }
+
+  .analytics-total-card strong {
+    font-size: 27px;
+  }
+
+  .analytics-type-card {
+    padding: 20px;
+  }
+}
+
+/* ================================
+   RESPONSIVE - 420px
+================================ */
+
+@media (max-width: 420px) {
+  .analytics-header {
+    padding: 0 14px;
+  }
+
+  .analytics-brand {
+    display: none;
+  }
+
+  .analytics-main {
+    width: calc(100% - 20px);
+
+    padding-top: 22px;
+  }
+
+  .analytics-title h1 {
+    font-size: 24px;
+  }
+
+  .analytics-total-card {
+    gap: 13px;
+    padding: 17px;
+  }
+
+  .analytics-total-icon {
+    width: 44px;
+    height: 44px;
+  }
+
+  .analytics-total-card strong {
+    font-size: 25px;
+  }
+
+  .analytics-status-card {
+    padding: 17px;
+  }
+
+  .analytics-type-card {
+    padding: 17px;
+  }
+
+  .analytics-error {
+    width: calc(100% - 30px);
+  }
+}

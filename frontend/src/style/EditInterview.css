@@ -1,0 +1,426 @@
+/* ================================
+   EDIT INTERVIEW PAGE
+================================ */
+
+.edit-interview-page {
+  min-height: 100vh;
+  background: #f7f9fc;
+  color: #1f2937;
+}
+
+/* ================================
+   HEADER
+================================ */
+
+.edit-interview-header {
+  height: 72px;
+  padding: 0 40px;
+  background: #ffffff;
+  border-bottom: 1px solid #e5e7eb;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.edit-interview-back {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+
+  color: #4b5563;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 500;
+
+  transition: color 0.2s ease;
+}
+
+.edit-interview-back:hover {
+  color: #2563eb;
+}
+
+.edit-interview-brand {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+
+  color: #2563eb;
+  font-size: 20px;
+  font-weight: 700;
+  letter-spacing: -0.3px;
+}
+
+/* ================================
+   MAIN
+================================ */
+
+.edit-interview-main {
+  width: min(100% - 48px, 1000px);
+  margin: 0 auto;
+  padding: 42px 0 60px;
+}
+
+/* ================================
+   TITLE
+================================ */
+
+.edit-interview-title {
+  margin-bottom: 28px;
+}
+
+.edit-interview-title h1 {
+  margin: 0 0 7px;
+
+  font-size: 30px;
+  line-height: 1.2;
+  font-weight: 700;
+  color: #111827;
+  letter-spacing: -0.5px;
+}
+
+.edit-interview-title p {
+  margin: 0;
+
+  color: #6b7280;
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+/* ================================
+   FORM
+================================ */
+
+.edit-interview-form {
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 14px;
+
+  padding: 32px;
+
+  box-shadow: 0 4px 18px rgba(15, 23, 42, 0.04);
+}
+
+/* ================================
+   ERROR
+================================ */
+
+.edit-interview-error {
+  margin-bottom: 24px;
+  padding: 12px 14px;
+
+  border: 1px solid #fecaca;
+  border-radius: 8px;
+
+  background: #fef2f2;
+  color: #b91c1c;
+
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+/* ================================
+   FORM GRID
+================================ */
+
+.edit-interview-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 22px 20px;
+}
+
+/* ================================
+   FORM GROUP
+================================ */
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.form-group label {
+  color: #374151;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+  width: 100%;
+  box-sizing: border-box;
+
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+
+  background: #ffffff;
+  color: #111827;
+
+  font-family: inherit;
+  font-size: 14px;
+
+  outline: none;
+
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease,
+    background 0.2s ease;
+}
+
+.form-group input,
+.form-group select {
+  height: 44px;
+  padding: 0 13px;
+}
+
+.form-group textarea {
+  min-height: 120px;
+  padding: 12px 13px;
+  resize: vertical;
+  line-height: 1.5;
+}
+
+/* ================================
+   INPUT STATES
+================================ */
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+  color: #9ca3af;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+  border-color: #2563eb;
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+}
+
+.form-group input:hover,
+.form-group select:hover,
+.form-group textarea:hover {
+  border-color: #9ca3af;
+}
+
+/* ================================
+   NOTES
+================================ */
+
+.edit-interview-notes {
+  margin-top: 22px;
+}
+
+/* ================================
+   ACTIONS
+================================ */
+
+.edit-interview-actions {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 12px;
+
+  margin-top: 30px;
+  padding-top: 24px;
+
+  border-top: 1px solid #eef0f3;
+}
+
+.cancel-edit-interview-btn,
+.save-edit-interview-btn {
+  height: 42px;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+
+  padding: 0 17px;
+
+  border-radius: 8px;
+
+  font-family: inherit;
+  font-size: 14px;
+  font-weight: 600;
+
+  text-decoration: none;
+
+  cursor: pointer;
+
+  transition:
+    background 0.2s ease,
+    border-color 0.2s ease,
+    color 0.2s ease,
+    transform 0.15s ease;
+}
+
+/* Cancel */
+
+.cancel-edit-interview-btn {
+  border: 1px solid #d1d5db;
+  background: #ffffff;
+  color: #374151;
+}
+
+.cancel-edit-interview-btn:hover {
+  background: #f9fafb;
+  border-color: #9ca3af;
+}
+
+/* Save */
+
+.save-edit-interview-btn {
+  border: 1px solid #2563eb;
+  background: #2563eb;
+  color: #ffffff;
+}
+
+.save-edit-interview-btn:hover {
+  background: #1d4ed8;
+  border-color: #1d4ed8;
+}
+
+.save-edit-interview-btn:active {
+  transform: translateY(1px);
+}
+
+.save-edit-interview-btn:disabled {
+  opacity: 0.65;
+  cursor: not-allowed;
+  transform: none;
+}
+
+/* ================================
+   LOADING
+================================ */
+
+.edit-interview-loading {
+  min-height: 100vh;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: #f7f9fc;
+
+  color: #6b7280;
+  font-size: 15px;
+  font-weight: 500;
+}
+
+/* ================================
+   RESPONSIVE - 800px
+================================ */
+
+@media (max-width: 800px) {
+  .edit-interview-header {
+    padding: 0 24px;
+  }
+
+  .edit-interview-main {
+    width: min(100% - 32px, 1000px);
+    padding: 32px 0 50px;
+  }
+
+  .edit-interview-form {
+    padding: 26px;
+  }
+
+  .edit-interview-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+}
+
+/* ================================
+   RESPONSIVE - 600px
+================================ */
+
+@media (max-width: 600px) {
+  .edit-interview-header {
+    height: 64px;
+    padding: 0 18px;
+  }
+
+  .edit-interview-brand {
+    font-size: 18px;
+  }
+
+  .edit-interview-back {
+    font-size: 13px;
+  }
+
+  .edit-interview-main {
+    width: min(100% - 24px, 1000px);
+    padding: 26px 0 40px;
+  }
+
+  .edit-interview-title {
+    margin-bottom: 20px;
+  }
+
+  .edit-interview-title h1 {
+    font-size: 26px;
+  }
+
+  .edit-interview-title p {
+    font-size: 14px;
+  }
+
+  .edit-interview-form {
+    padding: 20px;
+    border-radius: 12px;
+  }
+
+  .edit-interview-actions {
+    flex-direction: column-reverse;
+    align-items: stretch;
+  }
+
+  .cancel-edit-interview-btn,
+  .save-edit-interview-btn {
+    width: 100%;
+  }
+}
+
+/* ================================
+   RESPONSIVE - 420px
+================================ */
+
+@media (max-width: 420px) {
+  .edit-interview-header {
+    padding: 0 14px;
+  }
+
+  .edit-interview-brand {
+    display: none;
+  }
+
+  .edit-interview-main {
+    width: calc(100% - 20px);
+    padding-top: 22px;
+  }
+
+  .edit-interview-title h1 {
+    font-size: 24px;
+  }
+
+  .edit-interview-form {
+    padding: 16px;
+  }
+
+  .form-group input,
+  .form-group select {
+    height: 42px;
+  }
+
+  .edit-interview-actions {
+    margin-top: 24px;
+    padding-top: 20px;
+  }
+}
